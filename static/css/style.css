@@ -42,3 +42,30 @@ header {
 .btn-add { background-color: #2ecc71; padding: 10px 20px; border-radius: 8px; text-decoration: none; color: white;}
 
 
+/* Forms and hover effects */
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+
+form { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 10px; 
+    max-width: 500px; 
+    margin: 40px auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+button { 
+    background-color: #3498db; 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold;
+}
