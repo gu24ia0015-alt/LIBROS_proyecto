@@ -34,3 +34,15 @@ def delete_book(id):
     global books
     books = [b for b in books if b['id'] != id]
     return redirect(url_for('index'))
+
+
+@app.route('/edit/<int:id>', methods=['GET', 'POST'])
+def edit_book(id):
+    book = next((b for b in books if b['id'] == id), None)
+    if request.method == 'POST':
+        book['titulo'] = request.form['titulo']
+        book['autor'] = request.form['autor']
+        book['anio'] = request.form['anio']
+        book['genero'] = request.form['genero']
+        return redirect(url_for('index'))
+    return render_template('formulario.html', book=book)
